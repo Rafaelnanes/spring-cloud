@@ -16,3 +16,10 @@ client-1/spring-cloud-client-1/.classpath
 client-1/spring-cloud-client-1/.project
 client-1/spring-cloud-client-1/.settings
 client-1/spring-cloud-client-1/.gitignore
+
+
+zuul-api-gateway/zuul/target
+zuul-api-gateway/zuul/.classpath
+zuul-api-gateway/zuul/.project
+zuul-api-gateway/zuul/.settings
+zuul-api-gateway/zuul/.gitignore

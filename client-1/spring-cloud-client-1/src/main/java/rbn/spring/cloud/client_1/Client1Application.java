@@ -13,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,10 +42,18 @@ public class Client1Application {
 class ServiceInstanceRestController {
 
     @Autowired
+    private Environment env;
+
+    @Autowired
     private DiscoveryClient discoveryClient;
 
     @RequestMapping("/service-instances/{applicationName}")
     public List<ServiceInstance> serviceInstancesByApplicationName(@PathVariable String applicationName) {
 	return this.discoveryClient.getInstances(applicationName);
+    }
+
+    @GetMapping("/status/check")
+    public String status() {
+	return "Working on port " + env.getProperty("local.server.port");
     }
 }
