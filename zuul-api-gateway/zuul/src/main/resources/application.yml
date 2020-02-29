@@ -1,0 +1,16 @@
+server.port: 8011
+spring.application.name: zuul-client
+management.endpoints.web.exposure.include: "*"
+eureka.client:
+   serviceUrl.defaultZone: http://localhost:8761/eureka
+   fetchRegistry: true
+   registerWithEureka: true
+
+zuul:
+   debug:
+   request: true
+   routes:
+      client1:
+         path: /client1/any
+         serviceId: client1
+         stripPrefix: true

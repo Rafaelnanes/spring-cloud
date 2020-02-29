@@ -41,6 +41,8 @@ public class Client1Application {
 @RestController
 class ServiceInstanceRestController {
 
+    private static final Logger LOG = LoggerFactory.getLogger(ServiceInstanceRestController.class);
+
     @Autowired
     private Environment env;
 
@@ -52,8 +54,9 @@ class ServiceInstanceRestController {
 	return this.discoveryClient.getInstances(applicationName);
     }
 
-    @GetMapping("/status/check")
+    @GetMapping("/client1/any")
     public String status() {
+	LOG.info("#### Reached Endpoint here ####");
 	return "Working on port " + env.getProperty("local.server.port");
     }
 }
