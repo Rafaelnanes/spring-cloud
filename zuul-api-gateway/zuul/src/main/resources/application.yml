@@ -10,7 +10,11 @@ zuul:
    debug:
    request: true
    routes:
-      client1:
+      client1-any:
          path: /client1/any
+         serviceId: client1
+         stripPrefix: true
+      client1-my-value:
+         path: /client1/my-value
          serviceId: client1
          stripPrefix: true

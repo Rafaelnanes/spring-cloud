@@ -1,0 +1,10 @@
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka
+server.port: 8083
+
+spring:
+   devtools.restart.enabled: false
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
