@@ -1,0 +1,36 @@
+server.port: 8888
+   
+management:
+  security.enabled: false
+  endpoints.web.exposure.include: "*"
+#spring.security.user.name=root
+#spring.security.user.password=s3cr3t
+
+spring.rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+   
+spring:
+  cloud.config.server.git:
+    uri: file://C:/dev/projetos/java/spring-cloud/config-server/config-server/src/main/resources
+    clone-on-start: true
+  profiles.active: native
+ 
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/config-server
+    #url: jdbc:h2:tcp://127.0.1.1:9092/~/Dev/Programs/H2Database/h2/databases/multi-auth-client
+    #url: jdbc:h2:tcp://localhost/~/Dev/Programs/H2Database/h2/databases/multi-auth-client
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        hbm2ddl:
+          auto: create-drop
+        
+ 
