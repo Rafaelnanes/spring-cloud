@@ -11,11 +11,39 @@ public class Property {
     @Id
     private String application;
 
-    private String podName;
+    private String name;
 
-    private String values;
+    private String value;
 
-    private String hash;
+    private String config;
+
+    private String profile;
+
+    private String label;
+
+    public String getConfig() {
+	return config;
+    }
+
+    public void setConfig(String config) {
+	this.config = config;
+    }
+
+    public String getProfile() {
+	return profile;
+    }
+
+    public void setProfile(String profile) {
+	this.profile = profile;
+    }
+
+    public String getLabel() {
+	return label;
+    }
+
+    public void setLabel(String label) {
+	this.label = label;
+    }
 
     public String getApplication() {
 	return application;
@@ -25,28 +53,20 @@ public class Property {
 	this.application = application;
     }
 
-    public String getPodName() {
-	return podName;
+    public String getName() {
+	return name;
     }
 
-    public void setPodName(String podName) {
-	this.podName = podName;
+    public void setName(String name) {
+	this.name = name;
     }
 
-    public String getValues() {
-	return values;
+    public String getValue() {
+	return value;
     }
 
-    public void setValues(String values) {
-	this.values = values;
-    }
-
-    public String getHash() {
-	return hash;
-    }
-
-    public void setHash(String hash) {
-	this.hash = hash;
+    public void setValue(String value) {
+	this.value = value;
     }
 
 }
