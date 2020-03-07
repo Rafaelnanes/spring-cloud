@@ -1,0 +1,18 @@
+server.port: 8888
+   
+management:
+  security.enabled: false
+  endpoints.web.exposure.include: "*"
+#spring.security.user.name=root
+#spring.security.user.password=s3cr3t
+
+spring:
+  cloud:
+    config.server:
+      git:
+        uri: file://C:/dev/projetos/java/spring-cloud/config-server/config-server/src/main/resources
+        clone-on-start: true
+      native.searchLocations: classpath:/config-active/ 
+  profiles.active: native
+        
+ 
