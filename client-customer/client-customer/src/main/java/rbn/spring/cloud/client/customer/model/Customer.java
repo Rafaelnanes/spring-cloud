@@ -1,14 +1,14 @@
-package rbn.spring.cloud.client.product.model;
+package rbn.spring.cloud.client.customer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Product {
+public class Customer {
 
     private String id;
 
-    private String name;
+    private Product product;
 
 }

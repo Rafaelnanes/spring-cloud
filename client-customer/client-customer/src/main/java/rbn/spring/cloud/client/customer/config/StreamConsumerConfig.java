@@ -1,4 +1,4 @@
-package rbn.spring.cloud.client.customer;
+package rbn.spring.cloud.client.customer.config;
 
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.cloud.stream.annotation.EnableBinding;

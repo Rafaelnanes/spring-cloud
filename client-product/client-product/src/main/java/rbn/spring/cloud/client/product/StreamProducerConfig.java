@@ -27,6 +27,7 @@ public class StreamProducerConfig {
     public Message<?> generate() {
 	String value = data[RANDOM.nextInt(data.length)];
 	log.info("Sending: {}", value);
-	return MessageBuilder.withPayload(new Product(value)).setHeader("rbnKey", value).build();
+	return MessageBuilder.withPayload(new Product(String.valueOf(RANDOM), value)).setHeader("rbnKey", value)
+		.build();
     }
 }

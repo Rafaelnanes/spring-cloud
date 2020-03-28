@@ -1,0 +1,10 @@
+request:
+  method: GET
+  url: /product/1
+response:
+  status: 200
+  body:
+    id: 1
+    name: "aaa"
+  headers:
+    Content-Type: application/json
