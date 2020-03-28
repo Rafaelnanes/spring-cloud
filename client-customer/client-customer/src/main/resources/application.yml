@@ -1,0 +1,14 @@
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka
+server.port: 8086
+
+spring:
+   devtools.restart.enabled: false
+   cloud:
+     stream:
+       bindings:
+         input:
+           destination: rbnProducerDestinationName
+           group: rbnGroup
+#           consumer:
+#             partitioned: true
+#             instance-index: 0

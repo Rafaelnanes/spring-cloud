@@ -1,0 +1,23 @@
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka
+server.port: 8085
+
+spring:
+   devtools.restart.enabled: false
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest   
+   cloud:
+     stream:
+       bindings:
+         output:
+           destination: rbnProducerDestinationName
+           group: rbnGroup
+           producer:
+#             partitioned: true
+#             partition-key-expression: headers['rbnKey']
+#             partition-count: 2
+            # The required-groups property is required only if you need the consumer queues to be provisioned when the producer is deployed. Otherwise, any messages sent to a partition are lost until the corresponding consumer is deployed
+             required-groups:
+             - rbnGroup

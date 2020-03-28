@@ -23,3 +23,15 @@ zuul-api-gateway/zuul/.classpath
 zuul-api-gateway/zuul/.project
 zuul-api-gateway/zuul/.settings
 zuul-api-gateway/zuul/.gitignore
+
+client-customer/client-customer/target
+client-customer/client-customer/.classpath
+client-customer/client-customer/.project
+client-customer/client-customer/.settings
+client-customer/client-customer/.gitignore
+
+client-product/client-product/target
+client-product/client-product/.classpath
+client-product/client-product/.project
+client-product/client-product/.settings
+client-product/client-product/.gitignore
