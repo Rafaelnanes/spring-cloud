@@ -36,7 +36,7 @@ class ServiceInstanceRestController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ServiceInstanceRestController.class);
 
-    @Value("${my-value}")
+    @Value("${my-value:any}")
     private String myValue;
 
     @Autowired
@@ -53,7 +53,7 @@ class ServiceInstanceRestController {
     @GetMapping("/any")
     public String status() {
 	LOG.info("#### Reached Endpoint here ####");
-	return "Working on port " + env.getProperty("local.server.port");
+	return "Working on port " + env.getProperty("server.port");
     }
 
     @GetMapping(value = "/my-value", produces = MediaType.TEXT_PLAIN_VALUE)
