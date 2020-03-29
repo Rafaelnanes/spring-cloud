@@ -58,7 +58,7 @@ class ServiceInstanceRestController {
 
     @GetMapping(value = "/my-value", produces = MediaType.TEXT_PLAIN_VALUE)
     public String myValue() {
-	return String.format("Here is my value: %s", myValue);
+	return String.format("Here is my value: %s, on port: %s", myValue, env.getProperty("server.port"));
     }
 
 }

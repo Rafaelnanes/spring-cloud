@@ -1,0 +1,23 @@
+server.port: 8090
+management.endpoints.web.exposure.include: "*"
+eureka.client:
+   serviceUrl.defaultZone: http://localhost:8761/eureka
+#   instance.preferIpAddress: true
+   fetchRegistry: true
+   registerWithEureka: true
+   
+   
+spring:
+   application.name: api-gateway
+   cloud.gateway:
+      discovery.locator.enabled: true
+      routes:
+      - id: client1-any
+        uri: lb://client1
+        predicates:
+        - Path=/client1/any
+      - id: client1-my-value
+        uri: lb://client1
+        predicates:
+        - Path=/client1/my-value
+

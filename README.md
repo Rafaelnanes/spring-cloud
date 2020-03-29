@@ -7,6 +7,5 @@
 ##Api-Gateway
 ###testar o Zuul e o Spring-Api-Gateway de formas separadas para entender melhor
 
-##Sleuth
-
-##Vault
+##Zuul
+Para testar o zuul, todas as chamadas tem que começar com http:8080/api/{endpoint-servico}

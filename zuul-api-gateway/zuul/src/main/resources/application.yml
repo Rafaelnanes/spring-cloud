@@ -15,15 +15,15 @@ zuul:
          path: /client1/any
          serviceId: client1
          stripPrefix: true
-#      client1-my-value:
-#         path: /client1/my-value
-#         serviceId: client1
-#         stripPrefix: true
-#      product-by-id:
-#         path: /product/*
-#         serviceId: client-product
-#         stripPrefix: true
-#      customer-by-id:
-#         path: /product/*
-#         serviceId: client-customer
-#         stripPrefix: true
+      client1-my-value:
+         path: /client1/my-value
+         serviceId: client1
+         stripPrefix: true
+      product-by-id:
+         path: /product/*
+         serviceId: client-product
+         stripPrefix: true
+      customer-by-id:
+         path: /product/*
+         serviceId: client-customer
+         stripPrefix: true

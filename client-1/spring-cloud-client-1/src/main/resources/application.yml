@@ -5,7 +5,7 @@ eureka:
 
 #server.port: ${random.int(8081,8999)} n pode usar porque o eureka n consegue gerenciar o loadBalance, é um bug
 #server.port: 0 //n da pre usar, porque o eureka n consegue criar outra instancia como discoveryClient, e assim o zuul n consegue fazer o load balance.
-server.port: 8081
+server.port: 8082
 
 spring:
    devtools.restart.enabled: false
